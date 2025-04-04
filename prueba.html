@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Presupuesto COT14385 - Soundtec</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f7f9fc;
+      margin: 0;
+      padding: 0;
+      color: #111;
+    }
+    header {
+      background-color: #0a3d62;
+      color: white;
+      text-align: center;
+      padding: 30px 10px;
+    }
+    header img {
+      max-height: 80px;
+      margin-bottom: 10px;
+    }
+    main {
+      max-width: 1000px;
+      margin: auto;
+      padding: 20px;
+    }
+    section {
+      background: white;
+      border-radius: 10px;
+      padding: 30px;
+      margin-bottom: 40px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    }
+    h1, h2 {
+      color: #0a3d62;
+    }
+    h2 {
+      margin-top: 0;
+      border-bottom: 2px solid #0a3d62;
+      padding-bottom: 8px;
+    }
+    p, li {
+      font-size: 15px;
+      line-height: 1.6;
+    }
+    .logos-marcas img, .certificaciones img, .diagramas img, .footer-logo img {
+      max-width: 100%;
+      margin: 10px 0;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      font-size: 14px;
+      text-align: left;
+    }
+    th {
+      background-color: #0a3d62;
+      color: white;
+    }
+    .producto-detalle {
+      margin-top: 10px;
+      display: none;
+    }
+    .producto-detalle img {
+      max-width: 200px;
+      display: block;
+      margin-top: 10px;
+    }
+    .toggle-btn {
+      float: right;
+      background: none;
+      border: none;
+      font-size: 18px;
+      cursor: pointer;
+      color: #0a3d62;
+    }
+    .btn-descargar {
+      background: #0a3d62;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      float: right;
+    }
+    footer {
+      background: #0a3d62;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+      font-size: 14px;
+    }
+    @media print {
+      .btn-descargar, .toggle-btn { display: none !important; }
+      body { background: white; }
+      section { box-shadow: none; border: none; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="./imagenes/image1.png" alt="Logo Soundtec">
+    <h1>Presupuesto COT14385</h1>
+    <p>HOSPITAL DE NIÑOS RICARDO GUTIÉRREZ</p>
+  </header>
+  <main>
+    <button class="btn-descargar" onclick="window.print()">Descargar PDF</button>
+
+    <section>
+      <h2>Presentación</h2>
+      <p><strong>Fecha:</strong> Buenos Aires, 25 de Marzo de 2025</p>
+      <p><strong>Ref:</strong> Sistema de Audio y Video para Aula Magna</p>
+      <p><strong>Presupuesto:</strong> COT14385</p>
+      <p>En atención a la solicitud realizada, se extiende para su evaluación la presente cotización para la provisión de equipamiento y/o servicios relacionados con el sistema de la referencia.</p>
+      <p>SOUNDTEC es partner autorizado y distribuidor oficial en Argentina de más de 70 marcas líderes, y cuenta con certificación ISO 9001, lo que garantiza la calidad profesional del servicio prestado.</p>
+      <div class="logos-marcas">
+        <img src="./imagenes/image3.png" alt="Marcas Representadas">
+      </div>
+    </section>
+
+    <section>
+      <h2>Certificaciones</h2>
+      <div class="certificaciones">
+        <img src="./imagenes/image4.png" alt="Certificaciones IRAM IQNet">
+      </div>
+    </section>
+
+    <section>
+      <h2>Diagrama de Instalación</h2>
+      <div class="diagramas">
+        <img src="./imagenes/image2.png" alt="Diagrama Técnico">
+      </div>
+    </section>
+
+    <section>
+      <h2>Alternativa 1</h2>
+      <p>Alternativa basada en el listado solicitado originalmente por el cliente. Incluye:</p>
+      <table>
+        <thead>
+          <tr><th>Item</th><th>Cant</th><th>U</th><th>Descripción</th><th>PU</th><th>Total</th><th>IVA</th><th>Entrega</th></tr>
+        </thead>
+        <tbody id="tablaAlt1"></tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>Alternativa 2</h2>
+      <p>Versión optimizada por ingeniería con mejor calidad y compatibilidad técnica.</p>
+      <table><thead><tr><th>Item</th><th>Cant</th><th>U</th><th>Descripción</th><th>PU</th><th>Total</th><th>IVA</th><th>Entrega</th></tr></thead><tbody id="tablaAlt2"></tbody></table>
+    </section>
+
+    <section>
+      <h2>Alternativa 3</h2>
+      <p>Diseñada para maximizar la videoconferencia profesional con cámara PTZ y micrófonos distribuidos.</p>
+      <table><thead><tr><th>Item</th><th>Cant</th><th>U</th><th>Descripción</th><th>PU</th><th>Total</th><th>IVA</th><th>Entrega</th></tr></thead><tbody id="tablaAlt3"></tbody></table>
+    </section>
+
+    <section>
+      <h2>Alternativa 4</h2>
+      <p>Sistema completo para eventos y presentaciones institucionales en Aula Magna.</p>
+      <table><thead><tr><th>Item</th><th>Cant</th><th>U</th><th>Descripción</th><th>PU</th><th>Total</th><th>IVA</th><th>Entrega</th></tr></thead><tbody id="tablaAlt4"></tbody></table>
+    </section>
+
+    <section>
+      <h2>Alternativa 5</h2>
+      <p>Incluye grabación, streaming y soluciones avanzadas de conectividad.</p>
+      <table><thead><tr><th>Item</th><th>Cant</th><th>U</th><th>Descripción</th><th>PU</th><th>Total</th><th>IVA</th><th>Entrega</th></tr></thead><tbody id="tablaAlt5"></tbody></table>
+    </section>
+
+    <section>
+      <h2>Pie de Página</h2>
+      <div class="footer-logo">
+        <img src="./imagenes/image5.png" alt="Footer Soundtec">
+      </div>
+    </section>
+  </main>
+  <footer>
+    SOUNDTEC s.r.l. - Av. Donato Alvarez 1526 (C1416BTR) - C.A.B.A. - Argentina<br>
+    (+54 11) 4586 0400 - info@soundtec.com.ar - www.soundtec.com.ar
+  </footer>
+
+  <script>
+    const productos = {
+      tablaAlt1: [
+        ["01", "01", "u", "Pantalla motorizada 140\"", "1493,76", "1493,76", "21%", "Inmediata"],
+        ["02", "01", "u", "Soporte para proyector techo", "47,25", "47,25", "21%", "Inmediata"]
+      ],
+      tablaAlt2: [
+        ["01", "01", "u", "Proyector Epson láser 5000lm", "1850,00", "1850,00", "21%", "Inmediata"]
+      ],
+      tablaAlt3: [
+        ["01", "01", "u", "Cámara PTZ Atlona HDMI", "1120,00", "1120,00", "21%", "Inmediata"]
+      ],
+      tablaAlt4: [
+        ["01", "01", "u", "Micrófono de techo SHURE MXA910", "2100,00", "2100,00", "21%", "Inmediata"]
+      ],
+      tablaAlt5: [
+        ["01", "01", "u", "Sistema de grabación AV", "950,00", "950,00", "21%", "Inmediata"]
+      ]
+    };
+
+    Object.entries(productos).forEach(([id, lista]) => {
+      const tabla = document.getElementById(id);
+      lista.forEach(row => {
+        const tr = document.createElement("tr");
+        row.forEach(col => {
+          const td = document.createElement("td");
+          td.textContent = col;
+          tr.appendChild(td);
+        });
+        tabla.appendChild(tr);
+      });
+    });
+  </script>
+  <!-- Código original del documento aquí... -->
+<!-- Agregado automático para ítems con despliegue estético -->
+<script>
+    const datosAlt1 = [
+      ["01", "01", "u", "VIDIUM GS140WS. Pantalla enrollable motorizada de 140\" de diagonal.", "1493,76", "1493,76", "21%", "Inmediata", "Pantalla profesional para proyección de gran tamaño, control motorizado."],
+      ["02", "01", "u", "NDT PM-L1. Soporte para montaje de proyector.", "47,25", "47,25", "21%", "Inmediata", "Soporte robusto para instalar proyector en techo."],
+      ["03", "04", "u", "PURESONIC cable HDMI V 2.0. 15 Mts", "108,94", "435,78", "21%", "Inmediata", "Cable HDMI largo alcance para conexión audiovisual en alta calidad."],
+      ["04", "03", "u", "SAMSUNG 43CU7000 UHD 4K. Smart TV.", "458,72", "1376,15", "21%", "Inmediata", "Televisor 4K Smart de 43\", excelente resolución para monitoreo o réplica."],
+      ["05", "01", "u", "SOPORTE MOVIMIENTO COMPLETO 32-58\"", "118,07", "118,07", "21%", "Inmediata", "Soporte ajustable con inclinación para TVs de hasta 58\"."],
+      ["06", "01", "u", "PURESONIC MT-HD4X2. Matriz HDMI de 4 in / 2 out", "193,76", "193,76", "21%", "Inmediata", "Selector de señales HDMI para múltiples fuentes y pantallas."],
+      ["07", "01", "u", "Fuente para Matriz HDMI", "12,52", "12,52", "21%", "Inmediata", "Fuente de alimentación para matriz HDMI."],
+      ["08", "01", "u", "OPTOMA ZH450ST. Proyector láser Full HD", "2291,20", "2291,20", "21%", "Inmediata", "Proyector láser de corto alcance, alta luminosidad y nitidez."],
+      ["09", "01", "u", "JBL VMA2120. Amplificador + Mixer 2 zonas", "1232,28", "1232,28", "21%", "Inmediata", "Amplificador con control independiente para 2 zonas de sonido."],
+      ["10", "08", "u", "JBL CONTROL25-1L | Bafle Pasivo", "363,18", "2905,46", "21%", "Inmediata", "Altavoces pasivos compactos para instalación fija en salas."],
+      ["11", "01", "u", "SHURE BLX1288AR/CVLM15 Micrófono inalámbrico doble", "882,49", "882,49", "21%", "Inmediata", "Micrófonos inalámbricos de alta fidelidad y presentación elegante."],
+      ["12", "01", "u", "LOGITECH RALLY PLUS – Sistema de videoconferencia", "3840,00", "3840,00", "21%", "Inmediata", "Sistema completo de videoconferencia profesional con audio y video integrados."],
+      ["13", "01", "u", "LOGITECH RALLY MOUNTING KIT", "312,12", "312,12", "21%", "Inmediata", "Kit de montaje para sistema Logitech Rally."],
+      ["14", "05", "u", "LOGITECH RALLY MIC POD", "534,00", "2670,00", "21%", "Inmediata", "Micrófonos adicionales para expansión de cobertura en salas grandes."],
+      ["15", "03", "u", "LOGITECH MIC POD HUB", "294,00", "882,00", "21%", "Inmediata", "Hub distribuidor para micrófonos Logitech."],
+      ["16", "07", "u", "LOGITECH RALLY MIC POD MOUNT", "166,80", "1167,60", "21%", "Inmediata", "Soportes de montaje para micrófonos de techo."],
+      ["17", "01", "u", "Materiales de instalación necesarios", "351,00", "351,00", "21%", "Inmediata", "Cables, conectores y elementos necesarios para la instalación."],
+      ["18", "01", "u", "Instalación y Puesta en Funcionamiento", "1350,00", "1350,00", "21%", "A confirmar", "Instalación técnica profesional y pruebas de funcionamiento."],
+      ["19", "01", "u", "Ingeniería y documentación de obra", "150,00", "150,00", "21%", "A confirmar", "Planos, diagramas y documentación técnica para obra."],
+    ];
+    
+    const tabla = document.getElementById("tablaAlt1");
+    datosAlt1.forEach((p, i) => {
+      const tr = document.createElement("tr");
+      for (let j = 0; j < 8; j++) {
+        const td = document.createElement("td");
+        td.textContent = p[j];
+        tr.appendChild(td);
+      }
+      const btn = document.createElement("button");
+      btn.innerHTML = "&#9654;";
+      btn.className = "toggle-btn";
+      btn.onclick = () => {
+        const panel = document.getElementById(`detalle-${i}`);
+        panel.style.display = panel.style.display === "block" ? "none" : "block";
+        btn.classList.toggle("rotate");
+      };
+      tr.lastChild.appendChild(btn);
+      tabla.appendChild(tr);
+    
+      const detalle = document.createElement("tr");
+      const detalleTd = document.createElement("td");
+      detalleTd.colSpan = 8;
+      detalleTd.innerHTML = `<div class='producto-detalle' id='detalle-${i}'><strong>Descripción:</strong> ${p[8]}</div>`;
+      detalle.appendChild(detalleTd);
+      tabla.appendChild(detalle);
+    });
+    </script>
+</body>
+</html>
